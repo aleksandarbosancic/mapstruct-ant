@@ -27,7 +27,9 @@ public interface SourceTargetMapper
     @Mappings({
         @Mapping(source = "qax", target = "baz"),
         @Mapping(source = "baz", target = "qax"),
-        @Mapping(source = "date", target = "dateFormated")
+        @Mapping(source = "date", target = "dateFormated"),
+        @Mapping(target = "createdBy", ignore = true),
+        @Mapping(target = "createdDate", ignore = true)
     })
     Target sourceToTarget(Source source);
 
