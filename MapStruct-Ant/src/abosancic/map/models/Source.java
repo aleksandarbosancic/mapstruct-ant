@@ -6,6 +6,8 @@
  */
 package abosancic.map.models;
 
+import java.time.LocalDateTime;
+
 /**
  *
  * @author abosancic
@@ -18,6 +20,7 @@ public class Source extends AbstractAuditingEntity
     private int qax;
     private Long baz;
     private int zip;
+    private LocalDateTime date;
 
     public int getFoo()
     {
@@ -67,5 +70,15 @@ public class Source extends AbstractAuditingEntity
     public void setZip(int zip)
     {
         this.zip = zip;
+    }
+
+    public LocalDateTime getDate()
+    {
+        return date;
+    }
+
+    public void setDate(LocalDateTime date)
+    {
+        this.date = date;
     }
 }

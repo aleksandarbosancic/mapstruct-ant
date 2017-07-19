@@ -16,8 +16,8 @@ import org.mapstruct.Mappings;
  *
  * @author abosancic
  */
-//@Mapper
-@Mapper(config = CentralConfig.class)
+@Mapper
+//@Mapper(config = CentralConfig.class)
 public abstract class VetMapper implements BaseMapper<Vet, VetDTO> {
     
     public abstract Vet toEntity(VetDTO dto);

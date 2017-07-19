@@ -18,6 +18,7 @@ public class Target extends BaseDTO
     private Long baz;
     private int qax;
     private String zip;
+    private String dateFormated;
 
     public Long getFoo()
     {
@@ -67,5 +68,15 @@ public class Target extends BaseDTO
     public void setZip(String zip)
     {
         this.zip = zip;
+    }
+
+    public String getDateFormated()
+    {
+        return dateFormated;
+    }
+
+    public void setDateFormated(String dateFormated)
+    {
+        this.dateFormated = dateFormated;
     }
 }

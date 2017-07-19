@@ -10,15 +10,15 @@ package abosancic.map.mapper;
  *
  * @author abosancic
  */
-import abosancic.map.models.dto.Target;
 import abosancic.map.models.Source;
+import abosancic.map.models.dto.Target;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+@Mapper(uses = DateMapper.class)// inject date time formated
 public interface SourceTargetMapper
 {
 
@@ -26,7 +26,8 @@ public interface SourceTargetMapper
 
     @Mappings({
         @Mapping(source = "qax", target = "baz"),
-        @Mapping(source = "baz", target = "qax")
+        @Mapping(source = "baz", target = "qax"),
+        @Mapping(source = "date", target = "dateFormated")
     })
     Target sourceToTarget(Source source);
 

@@ -19,7 +19,7 @@ import org.mapstruct.ReportingPolicy;
  */
 @MapperConfig(
     mappingInheritanceStrategy = MappingInheritanceStrategy.AUTO_INHERIT_FROM_CONFIG,
-    unmappedTargetPolicy = ReportingPolicy.ERROR
+    unmappedTargetPolicy = ReportingPolicy.ERROR, uses = DateMapper.class
 )
 public interface CentralConfig
 {
